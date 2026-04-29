@@ -59,10 +59,18 @@ with st.sidebar:
 if st.session_state.polygons:
     # 1. Catalog Table
     st.header("Loaded Polygons")
-    catalog = [{"Name": p.name, "Vertices": len(p.pts3d), "Area": round(p.area, 4), "Valid": p.valid} 
-               for p in st.session_state.polygons.values()]
+    catalog = []
+    for p in st.session_state.polygons.values():
+        catalog.append({
+            "Name": p.name,
+            "Vertices": len(p.pts3d),
+            # Use a ternary to handle None values from invalid polygons
+            "Area": round(p.area, 4) if p.area is not None else "—",
+            "Planar": p.planar,
+            "Valid": p.valid,
+            "Notes": " | ".join(p.messages)
+        })
     st.dataframe(pd.DataFrame(catalog), use_container_width=True)
-
     # 2. Batch Analysis (Find All)
     st.header("Batch Congruence Check")
     if st.button("Run Global Comparison"):
