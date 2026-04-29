@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polygon Congruence | 3D Geometry Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+    <nav class="flex items-center justify-between px-8 py-6 bg-white shadow-sm">
+        <div class="text-2xl font-bold text-blue-600">
+            <i class="fas fa-draw-polygon mr-2"></i>PolyCheck
+        </div>
+        <div>
+            <a href="https://github.com/YOUR_USERNAME/polygon-congruence" class="text-slate-600 hover:text-blue-600 transition">
+                <i class="fab fa-github text-xl"></i>
+            </a>
+        </div>
+    </nav>
+
+    <header class="max-w-6xl mx-auto px-8 py-20 text-center">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
+            3D Polygon Congruence Made Simple
+        </h1>
+        <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
+            Upload 3D vertex data, validate planarity, and detect congruent pairs using advanced Procrustes analysis. Built for geometric researchers and engineers.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="https://polygon-congruence.streamlit.app" class="px-8 py-4 bg-blue-600 text-white rounded-lg font-bold text-lg shadow-lg hover:bg-blue-700 transition transform hover:-translate-y-1">
+                Launch Web App <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+            </a>
+            <a href="#features" class="px-8 py-4 bg-white text-blue-600 border border-blue-200 rounded-lg font-bold text-lg hover:bg-blue-50 transition">
+                Learn More
+            </a>
+        </div>
+    </header>
+
+    <section id="features" class="bg-white py-20">
+        <div class="max-w-6xl mx-auto px-8">
+            <h2 class="text-3xl font-bold text-center mb-16">Technical Capabilities</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                
+                <div class="p-6 rounded-xl border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Planarity Validation</h3>
+                    <p class="text-slate-600">Uses SVD-based plane fitting to detect deviations and project 3D points into a optimized 2D coordinate system.</p>
+                </div>
+
+                <div class="p-6 rounded-xl border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Congruence Engine</h3>
+                    <p class="text-slate-600">Detects congruence across all cyclic shifts, reversals, and reflections using optimal Procrustes rotation.</p>
+                </div>
+
+                <div class="p-6 rounded-xl border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-cyan-100 text-cyan-600 rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Interactive Visuals</h3>
+                    <p class="text-slate-600">Side-by-side 2D and 3D Matplotlib visualizations showing the exact alignment fit of detected pairs.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-200 text-center text-slate-500 text-sm">
+        <p>&copy; 2026 Polygon Congruence Tool. Open Source under MIT License.</p>
+    </footer>
+
+</body>
+</html>
